@@ -1,7 +1,7 @@
 {
   "name": "alen",
   "version": "0.0.1",
-  "description": "\u001b[C\u001b[D\u001b[D\u001b[C\u001b[D\u001b[这是一个框架",
+  "description": "这是一个UI框架",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/qinggge/alen/issues"
   },
-  "homepage": "https://github.com/qinggge/alen#readme"
+  "homepage": "https://github.com/qinggge/alen#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
