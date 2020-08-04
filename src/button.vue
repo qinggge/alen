@@ -11,6 +11,7 @@
 <script>
   import Icon from './icon';
   export default {
+    name: 'AlenButton',
     components: {
       'a-icon': Icon,
     },
