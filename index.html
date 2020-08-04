@@ -41,15 +41,9 @@
 <body>
   <div id="app">
     <div class="box">
-      <a-input value="张三" disabled></a-input>
-      <a-input value="李四" readonly></a-input>
-      <a-input value="王五"></a-input>
-    </div>
-    <div class="box">
-      <a-input value="王五" @change="inputChange"></a-input>
-    </div>
-    <div class="box">
-      <a-input value="王五" error="姓名不能少于两个字"></a-input>
+      <a-input v-model="message"></a-input>
+      <p>{{ message }}</p>
+      <button @click="message += 1">+1</button>
     </div>
     <div class="box">
       <a-button :loading="loading1" @click="loading1 = !loading1">按钮</a-button>
