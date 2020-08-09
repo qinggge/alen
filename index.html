@@ -23,30 +23,43 @@
       --border-color-hover: #666;
     }
 
-    #app {
-      margin: 20px;
-    }
-
     body {
       font-size: var(--font-size);
     }
   </style>
   <style>
     .demo {
-      background: #ddd;
       border: 1px solid #666;
-      height: 100px;
+      min-height: 100px;
+    }
+    .sider {
+      background: #333;
+      width: 150px;
+    }
+    .sider.slide-enter, .sider.slide-leave-to {
+      margin-left: -150px!important;
+    }
+    .header {
+      background: #999;
+      height:100px;
+    }
+    .footer {
+      background: #ccc;
+      
     }
   </style>
 </head>
 
 <body>
   <div id="app">
-    <a-row>
-      <a-col span="23" offset="1" :narrow-pc="{span: 12, offset: 12}">
-        <div class="demo"></div>
-      </a-col>
-    </a-row>
+    <a-layout style="height: 100vh;">
+      <a-sider>sider</a-sider>
+      <a-layout>
+        <a-header>header</a-header>
+        <a-content>content</a-content>
+        <a-footer>footer</a-footer>
+      </a-layout>
+    </a-layout>
   </div>
   <script src="./src/app.js"></script>
 </body>
