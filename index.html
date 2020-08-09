@@ -32,17 +32,32 @@
       border: 1px solid #666;
       min-height: 100px;
     }
+    .sider {
+      background: #333;
+      width: 150px;
+    }
+    .sider.slide-enter, .sider.slide-leave-to {
+      margin-left: -150px!important;
+    }
+    .header {
+      background: #999;
+      height:100px;
+    }
+    .footer {
+      background: #ccc;
+      
+    }
   </style>
 </head>
 
 <body>
   <div id="app">
     <a-layout style="height: 100vh;">
-      <a-sider class="demo">sider</a-sider>
+      <a-sider>sider</a-sider>
       <a-layout>
-        <a-header class="demo">header</a-header>
-        <a-content class="demo">content</a-content>
-        <a-footer class="demo">footer</a-footer>
+        <a-header>header</a-header>
+        <a-content>content</a-content>
+        <a-footer>footer</a-footer>
       </a-layout>
     </a-layout>
   </div>
