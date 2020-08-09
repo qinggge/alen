@@ -42,25 +42,24 @@
   <div id="app">
     <div style="border: 1px solid #000">
       <a-row gutter="20">
-        <a-col>1</a-col>
-        <a-col>2</a-col>
+        <a-col span="24" 
+          :ipad="{span:8}"
+          :narrow-pc="{span:4}"
+          :pc="{span:2}"
+          :wide-pc="{span:1}"
+        >
+        1
+        </a-col>
+        <a-col span="24" 
+          :ipad="{span:16}"
+          :narrow-pc="{span:20}"
+          :pc="{span:22}"
+          :wide-pc="{span:23}"
+        >
+        2
+        </a-col>
       </a-row>
-      <a-row>
-        <a-col>1</a-col>
-        <a-col>2</a-col>
-        <a-col>3</a-col>
-      </a-row>
-      <a-row>
-        <a-col>1</a-col>
-        <a-col>2</a-col>
-        <a-col>3</a-col>
-        <a-col>4</a-col>
-      </a-row>
-      <a-row>
-        <a-col span="2">1</a-col>
-        <a-col span="20" offset="2">2</a-col>
-      </a-row>
-      <a-row>
+      <a-row gutter="20">
         <a-col span="4">1</a-col>
         <a-col span="20">2</a-col>
       </a-row>
