@@ -36,17 +36,19 @@ new Vue({
     message: 'hi',
   },
   created() {
-    this.$toast('很少文字', {
-      closeButton: {
-        text: '关闭',
-        callback(toast) {
-          toast.log();
-          console.log('用户说他知道了');
-        },
-      },
-      enableHtml: true,
-    });
   },
   methods: {
+    showToast() {
+      this.$toast(`你的智商目前为${parseInt(Math.random() * 100)}`, {
+        closeButton: {
+          text: '关闭',
+          callback(toast) {
+            toast.log();
+            console.log('用户说他知道了');
+          },
+        },
+        enableHtml: true,
+      });
+    },
   }
 })
