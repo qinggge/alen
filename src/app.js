@@ -35,12 +35,18 @@ new Vue({
     loading3: false,
     message: 'hi',
   },
+  created() {
+    this.$toast('很少文字', {
+      closeButton: {
+        text: '关闭',
+        callback(toast) {
+          toast.log();
+          console.log('用户说他知道了');
+        },
+      },
+      enableHtml: true,
+    });
+  },
   methods: {
-    inputChange(e) {
-      console.log(e.target.value);
-    },
-    showToast() {
-      this.$toast('我是一个 toast');
-    }
   }
 })
