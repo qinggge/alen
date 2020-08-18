@@ -38,7 +38,10 @@ new Vue({
   created() {
   },
   methods: {
-    showToast() {
+    showToast1() {this.showToast('top')},
+    showToast2() {this.showToast('middle')},
+    showToast3() {this.showToast('bottom')},
+    showToast(position) {
       this.$toast(`你的智商目前为${parseInt(Math.random() * 100)}`, {
         closeButton: {
           text: '关闭',
@@ -48,6 +51,7 @@ new Vue({
           },
         },
         enableHtml: true,
+        position,
       });
     },
   }
