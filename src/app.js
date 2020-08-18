@@ -43,15 +43,15 @@ new Vue({
     showToast3() {this.showToast('bottom')},
     showToast(position) {
       this.$toast(`你的智商目前为${parseInt(Math.random() * 100)}`, {
+        position,
         closeButton: {
           text: '关闭',
           callback(toast) {
-            toast.log();
             console.log('用户说他知道了');
           },
         },
         enableHtml: true,
-        position,
+        autoClose: 3,
       });
     },
   }
