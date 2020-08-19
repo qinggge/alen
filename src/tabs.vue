@@ -37,8 +37,6 @@ export default {
           if (childVm.$options.name === 'alenTabsItem'
             && childVm.name === this.selected) {
             this.eventBus.$emit('update:selected', this.selected, childVm);
-            console.log(this.selected);
-            console.log(childVm);
           }
         })
       }
