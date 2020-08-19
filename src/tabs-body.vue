@@ -6,10 +6,13 @@
 <script>
 export default {
   name: 'alenTabsBody',
+  inject: ['eventBus'],
+  created() {
+  }
 }
 </script>
 <style>
   .tabs-body {
-    
+
   }
 </style>

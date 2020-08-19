@@ -52,13 +52,13 @@
 
 <body>
   <div id="app">
-    <a-tabs selected.sync="selectedTab">
+    <a-tabs :selected.sync="selectedTab">
       <a-tabs-head>
         <template slot="actions">
           <button>设置</button>
         </template>
         <a-tabs-item name="women">
-          <a-icon name="loading"></a-icon> 美女
+          <a-icon name="settings"></a-icon>美女
         </a-tabs-item>
         <a-tabs-item name="finance">
           财经
