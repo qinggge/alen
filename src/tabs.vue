@@ -15,35 +15,34 @@ export default {
     direction: {
       type: String,
       default: 'horizontal',
-      validator(value) {
+      validator (value) {
         return ['horizontal', 'vertical'].indexOf(value) >= 0;
       }
     }
   },
-  data() {
-    return  {
+  data () {
+    return {
       eventBus: new Vue(),
     }
   },
-  provide() {
+  provide () {
     return {
       eventBus: this.eventBus,
     }
   },
-  mounted() {
+  mounted () {
     this.$children.forEach((vm) => {
       if (vm.$options.name === 'alenTabsHead') {
-        vm.$children.forEach((item) => {
-          if (item.$options.name === 'alenTabsItem' && item.name === this.selected) {
-            console.log(item.$el);
-            this.eventBus.$emit('update:selected', this.selected, item);
+        vm.$children.forEach((childVm) => {
+          if (childVm.$options.name === 'alenTabsItem'
+            && childVm.name === this.selected) {
+            this.eventBus.$emit('update:selected', this.selected, childVm);
+            console.log(this.selected);
+            console.log(childVm);
           }
         })
       }
     })
-  },
+  }
 }
 </script>
-<style>
-  
-</style>

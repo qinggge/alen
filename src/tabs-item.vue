@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     xxx() {
-      this.eventBus.$emit('update:selected', [this.name, 1])
+      this.eventBus.$emit('update:selected', this.name, this)
     },
   }
 }
