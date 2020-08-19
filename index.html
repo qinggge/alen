@@ -52,9 +52,33 @@
 
 <body>
   <div id="app">
-    <button @click="showToast1">top</button>
-    <button @click="showToast2">middle</button>
-    <button @click="showToast3">bottom</button>
+    <a-tabs selected.sync="selectedTab">
+      <a-tabs-head>
+        <template slot="actions">
+          <button>设置</button>
+        </template>
+        <a-tabs-item name="women">
+          <a-icon name="loading"></a-icon> 美女
+        </a-tabs-item>
+        <a-tabs-item name="finance">
+          财经
+        </a-tabs-item>
+        <a-tabs-item name="sports">
+          体育
+        </a-tabs-item>
+      </a-tabs-head>
+      <a-tabs-body>
+        <a-tabs-pane name="women">
+          美女相关资讯
+        </a-tabs-pane>
+        <a-tabs-pane name="finance">
+          财经相关资讯
+        </a-tabs-pane>
+        <a-tabs-pane name="sports">
+          体育相关资讯
+        </a-tabs-pane>
+      </a-tabs-body>
+    </a-tabs>
   </div>
   <script src="./src/app.js"></script>
 </body>
