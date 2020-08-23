@@ -1,8 +1,8 @@
 <template>
   <div class="popover" ref="popover">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible"
-    :class="{[`position-${position}`]: true}">
-      <slot name="content"></slot>
+      :class="{[`position-${position}`]: true}">
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>
@@ -48,7 +48,7 @@
         validator(value) {
           return ['click', 'hover'].indexOf(value) >= 0;
         }
-      }
+      },
     },
     mounted() {
       if (this.trigger === 'click') {
@@ -152,6 +152,7 @@
       transform: translateY(-100%);
       margin-top: -10px;
       &::before, &::after {
+        border-bottom: none;
         left: 10px;
       }
       &::before {
@@ -166,10 +167,12 @@
     &.position-bottom {
       margin-top: 10px;
       &::before {
+        border-top: none;
         bottom: 100%;
         border-bottom-color: $border-color;
       }
       &::after {
+        border-top: none;
         bottom: calc(100% - 2px);
         border-bottom-color: white;
       }
@@ -178,6 +181,7 @@
       transform: translateX(-100%);
       margin-left: -10px;
       &::before, &::after {
+        border-right: none;
         transform: translateY(-50%);
         top: 50%;
       }
@@ -193,6 +197,7 @@
     &.position-right {
       margin-left: 10px;
       &::before, &::after {
+        border-left: none;
         transform: translateY(-50%);
         top: 50%;
       }

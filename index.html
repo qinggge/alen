@@ -55,8 +55,9 @@
 
     <div style="overflow: hidden; padding-top: 150px; padding-bottom: 40px;">
       <a-popover position="bottom">
-        <template slot="content">
+        <template slot="content" slot-scope="{close}">
           <div>asjdijasiodjioasjdiojasiojdisadjasiodjioasjdioajsiodjiaosjdiasjodjoasjidjasodjioas</div>
+          <a-button @click="close">关闭</a-button>
         </template>
         <a-button>点我</a-button>
       </a-popover>
@@ -101,7 +102,7 @@
       </a-popover>
       <a-popover position="right" trigger="hover">
         <template slot="content">
-          <div>popover内容</div>
+          <div>popover内容<a href="https://www.qq.com">看新闻</a></div>
         </template>
         <a-button>点我</a-button>
       </a-popover>
