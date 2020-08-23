@@ -30,11 +30,32 @@ describe('Popover', () => {
     vm.$el.querySelector('button').click();
     vm.$nextTick(() => {
       const { contentWrapper } = vm.$refs.a.$refs;
-      expect(contentWrapper.classList.contains('position-top')).to.be.true;
+      expect(contentWrapper.classList.contains('position-bottom')).to.be.true;
       done();
     });
-    // const useElement = vm.$el.querySelector('use')
-    // expect(useElement.getAttribute('xlink:href')).to.equal('#i-settings')
-    // vm.$destroy()
+  });
+
+  it('可以设置 trigger', (done) => {
+    Vue.component('a-popover', Popover);
+    const div = document.createElement('div');
+    document.body.appendChild(div);
+    div.innerHTML = `
+      <a-popover trigger="hover" ref="a">
+        <template slot="content">
+        弹出内容
+        </template>
+        <button>点我</button>
+      </a-popover>
+    `
+    const vm = new Vue({
+      el: div
+    });
+    let event = new Event('mouseenter');
+    vm.$el.dispatchEvent(event);
+    const triggerWrapper = document.querySelector('.content-wrapper');
+    vm.$nextTick(() => {
+      expect(triggerWrapper).to.exist;
+      done();
+    })
   })
 })
