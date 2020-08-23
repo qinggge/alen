@@ -47,6 +47,9 @@ new Vue({
   created() {
   },
   methods: {
+    yyy(){
+      console.log('yyy')
+    },
     showToast1() {this.showToast('top')},
     showToast2() {this.showToast('middle')},
     showToast3() {this.showToast('bottom')},
