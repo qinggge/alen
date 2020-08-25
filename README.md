@@ -9,7 +9,7 @@
 ## 开始使用
   1. 添加 CSS 样式
     出于使用习惯考虑，请在 CSS 中开启 border-box。
-
+  
     ```
     * ,*::before ,*::after{
       margin: 0;
@@ -24,6 +24,7 @@
     ```
 
   3. 引入 alen
+  
     ```
     import {Button} from 'alen-ui';
     import 'alen-ui/dist/index.css';
