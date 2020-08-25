@@ -58,7 +58,7 @@
         this.$refs.popover.addEventListener('mouseleave', this.close);
       }
     },
-    destroyed() {
+    beforeDestroy() {
       if (this.trigger === 'click') {
         this.$refs.popover.removeEventListener('click', this.onClick) 
       } else {
@@ -140,6 +140,7 @@
     max-width: 20em;
     word-break: break-all;
     background: white;
+    z-index: 1;
     &::before, &::after {
       content: '';
       display: block;

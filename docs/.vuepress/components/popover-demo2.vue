@@ -1,25 +1,24 @@
 <template>
   <div>
-    <a-popover>
+    <a-popover trigger="hover">
       <a-button>上方弹出</a-button>
       <template slot="content">
-        弹出层
-        <a-button>支持HTML</a-button>
+        弹出内容
       </template>
     </a-popover>
-    <a-popover position="bottom">
+    <a-popover position="bottom" trigger="hover">
       <a-button>下方弹出</a-button>
       <template slot="content">
         弹出内容
       </template>
     </a-popover>
-    <a-popover position="left">
+    <a-popover position="left" trigger="hover">
       <a-button>左边弹出</a-button>
       <template slot="content">
         弹出内容
       </template>
     </a-popover>
-    <a-popover position="right">
+    <a-popover position="right" trigger="hover">
       <a-button>右边弹出</a-button>
       <template slot="content">
         弹出内容
