@@ -2,19 +2,24 @@
   <transition name="slide">
     <div class="sider" v-if="visible">
       <slot></slot>
-      <button @click="visible = false">close</button>
+      <button v-if="close" @click="visible = false">close</button>
     </div>
   </transition>
 </template>
 <script>
 export default {
   name: 'alenSider',
+  props: {
+    close: {
+      type: Boolean,
+      default: false,
+    }
+  },
   data() {
     return {
       visible: true,
     }
   },
-  methods: {}
 }
 </script>
 <style lang="scss" scoped>
